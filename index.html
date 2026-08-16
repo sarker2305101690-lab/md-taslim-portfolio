@@ -1,1 +1,1665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Md. Taslim Sarker | Portfolio</title>
+
+<meta name="description"
+content="Md. Taslim Sarker - Computer Science Student, Digital Creator, AI & ML Enthusiast and Creative Media Professional.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --primary: #176b50;
+    --primary-dark: #0c3f30;
+    --accent: #d8efb0;
+    --text: #17221e;
+    --muted: #68756f;
+    --light: #f5f8f6;
+    --white: #ffffff;
+    --border: #e1e9e4;
+    --shadow: 0 20px 60px rgba(12,63,48,0.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1160px, 92%);
+    margin: auto;
+}
+
+/* NAVIGATION */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--primary-dark);
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 27px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: #59655f;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-button {
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: var(--primary);
+    color: white !important;
+}
+
+.menu {
+    display: none;
+    background: var(--primary-dark);
+    color: white;
+    border: none;
+    padding: 9px 13px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+.mobile-menu {
+    display: none;
+    background: white;
+    padding: 15px 4%;
+    box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-weight: 600;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    padding-top: 76px;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(216,239,176,.45), transparent 28%),
+        linear-gradient(135deg,#f7faf8,#eaf4ee);
+}
+
+.hero-grid {
+    min-height: calc(100vh - 76px);
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.hero-small {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(50px,7vw,82px);
+    line-height: 1;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #53615b;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    max-width: 650px;
+    font-size: 15px;
+    color: var(--muted);
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 21px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .25s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(23,107,80,.20);
+}
+
+.btn-outline {
+    border: 1px solid #cad8d1;
+    background: white;
+    color: var(--primary-dark);
+}
+
+.profile-area {
+    position: relative;
+}
+
+.profile-photo {
+    width: 100%;
+    max-width: 430px;
+    height: 530px;
+    margin-left: auto;
+    border-radius: 30px;
+    overflow: hidden;
+    background: #dfe9e3;
+    box-shadow: var(--shadow);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* IMPORTANT:
+   Replace profile.jpg with your own photo.
+*/
+
+.profile-info {
+    position: absolute;
+    bottom: 25px;
+    left: 15px;
+    background: white;
+    padding: 18px 20px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.profile-info strong {
+    display: block;
+    color: var(--primary-dark);
+    font-size: 16px;
+}
+
+.profile-info span {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+/* SECTION */
+
+section {
+    scroll-margin-top: 80px;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 55px;
+}
+
+.section-title small {
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.section-title h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 44px;
+    color: var(--primary-dark);
+    line-height: 1.15;
+    margin: 10px 0 14px;
+}
+
+.section-title p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ABOUT */
+
+.about {
+    background: white;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-image {
+    height: 470px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-content h2 {
+    font-family: "Playfair Display", serif;
+    color: var(--primary-dark);
+    font-size: 43px;
+    line-height: 1.15;
+    margin: 10px 0 18px;
+}
+
+.about-content p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.info-list {
+    margin-top: 25px;
+    display: grid;
+    gap: 13px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.info-item strong {
+    color: var(--primary-dark);
+    font-size: 13px;
+}
+
+.info-item span {
+    color: var(--muted);
+    font-size: 13px;
+    text-align: right;
+}
+
+/* SKILLS */
+
+.skills {
+    background: var(--light);
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 17px;
+}
+
+.skill {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 17px;
+    padding: 23px;
+    transition: .25s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.skill h3 {
+    color: var(--primary-dark);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.skill p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* EXPERIENCE */
+
+.experience {
+    background: white;
+}
+
+.experience-list {
+    max-width: 900px;
+    margin: auto;
+}
+
+.experience-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.experience-date {
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.experience-content h3 {
+    color: var(--primary-dark);
+    font-size: 19px;
+    margin-bottom: 3px;
+}
+
+.experience-content h4 {
+    color: var(--primary);
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.experience-content p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* PROJECTS */
+
+.projects {
+    background: var(--light);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 22px;
+}
+
+.project {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .25s;
+}
+
+.project:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.project-image {
+    height: 210px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 22px;
+}
+
+.project-tag {
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project h3 {
+    color: var(--primary-dark);
+    font-size: 18px;
+    margin: 7px 0;
+}
+
+.project p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+/* EDUCATION */
+
+.education {
+    background: white;
+}
+
+.education-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px;
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    background: #fbfdfb;
+}
+
+.education-card h3 {
+    color: var(--primary-dark);
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.education-card h4 {
+    color: var(--primary);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.education-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* ACTIVITIES */
+
+.activities {
+    background: var(--primary-dark);
+    color: white;
+}
+
+.activities .section-title h2 {
+    color: white;
+}
+
+.activities .section-title p {
+    color: #b5c9c0;
+}
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.activity {
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,.12);
+    background: rgba(255,255,255,.04);
+    border-radius: 20px;
+}
+
+.activity h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.activity p {
+    color: #a9bdb4;
+    font-size: 12px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: var(--light);
+}
+
+.contact-box {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    border-radius: 25px;
+    padding: 45px;
+    box-shadow: var(--shadow);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.contact-info h3 {
+    font-family: "Playfair Display", serif;
+    color: var(--primary-dark);
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.contact-info p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.contact-item {
+    margin-bottom: 13px;
+}
+
+.contact-item small {
+    display: block;
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.contact-item span,
+.contact-item a {
+    font-size: 13px;
+    color: var(--text);
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    padding: 10px 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.contact-form {
+    display: grid;
+    gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    padding: 13px 14px;
+    border-radius: 10px;
+    font-family: inherit;
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary);
+}
+
+/* FOOTER */
+
+footer {
+    background: #062d22;
+    color: white;
+    padding: 45px 0 20px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+
+.footer-name {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.footer-name span {
+    color: #b9dd87;
+}
+
+.footer-top p {
+    color: #91a99f;
+    font-size: 12px;
+    max-width: 400px;
+    margin-top: 7px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.footer-links a {
+    color: #a7bbb3;
+    font-size: 12px;
+}
+
+.copyright {
+    text-align: center;
+    color: #78948a;
+    font-size: 10px;
+    padding-top: 20px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 950px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 70px 0;
+    }
+
+    .profile-photo {
+        margin: auto;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .activity-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media(max-width: 650px) {
+
+    .navbar {
+        height: 68px;
+    }
+
+    .hero {
+        padding-top: 68px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero h2 {
+        font-size: 15px;
+    }
+
+    .profile-photo {
+        height: 400px;
+    }
+
+    .section {
+        padding: 75px 0;
+    }
+
+    .section-title h2,
+    .about-content h2 {
+        font-size: 35px;
+    }
+
+    .skill-grid,
+    .project-grid,
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-box {
+        padding: 25px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+
+<div class="container navbar">
+
+<a href="#home" class="logo">
+Taslim<span>.</span>
+</a>
+
+<nav class="nav-links">
+
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#education">Education</a>
+<a href="#contact" class="nav-button">Contact</a>
+
+</nav>
+
+<button class="menu" onclick="toggleMenu()">☰</button>
+
+</div>
+
+<div class="mobile-menu" id="mobileMenu">
+
+<a href="#about" onclick="toggleMenu()">About</a>
+<a href="#skills" onclick="toggleMenu()">Skills</a>
+<a href="#experience" onclick="toggleMenu()">Experience</a>
+<a href="#projects" onclick="toggleMenu()">Projects</a>
+<a href="#education" onclick="toggleMenu()">Education</a>
+<a href="#contact" onclick="toggleMenu()">Contact</a>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="hero-small">
+Portfolio
+</div>
+
+<h1>
+Md. <span>Taslim</span> Sarker
+</h1>
+
+<h2>
+Computer Science Student | Digital Creator | AI & ML Enthusiast | Creative Media Professional
+</h2>
+
+<p class="hero-description">
+I am a Computer Science & Engineering student at Daffodil
+International University with an interest in technology,
+creative media, digital marketing, artificial intelligence
+and community-driven initiatives.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#about" class="btn btn-primary">
+Explore My Work
+</a>
+
+<a href="#contact" class="btn btn-outline">
+Contact Me
+</a>
+
+</div>
+
+</div>
+
+
+<div class="profile-area">
+
+<div class="profile-photo">
+
+<!-- Replace profile.jpg with your own profile photo -->
+
+<img src="profile.jpg" alt="Md. Taslim Sarker">
+
+</div>
+
+<div class="profile-info">
+
+<strong>Md. Taslim Sarker</strong>
+
+<span>
+B.Sc. in Computer Science & Engineering
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="section about" id="about">
+
+<div class="container about-grid">
+
+<div class="about-image">
+
+<img
+src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=90"
+alt="Computer Science and technology"
+>
+
+</div>
+
+<div class="about-content">
+
+<small class="hero-small">
+About Me
+</small>
+
+<h2>
+Technology, creativity and purpose.
+</h2>
+
+<p>
+Hello, I am Md. Taslim Sarker. I am currently studying
+Computer Science & Engineering at Daffodil International
+University.
+</p>
+
+<p>
+Alongside my academic journey, I work across digital
+marketing, graphic design, creative media, technology and
+community-focused initiatives.
+</p>
+
+<p>
+I enjoy learning new technologies, creating digital content,
+working with teams and turning ideas into practical projects.
+</p>
+
+
+<div class="info-list">
+
+<div class="info-item">
+<strong>Name</strong>
+<span>Md. Taslim Sarker</span>
+</div>
+
+<div class="info-item">
+<strong>University</strong>
+<span>Daffodil International University</span>
+</div>
+
+<div class="info-item">
+<strong>Degree</strong>
+<span>B.Sc. in Computer Science & Engineering</span>
+</div>
+
+<div class="info-item">
+<strong>Focus</strong>
+<span>Technology, Design & Digital Media</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section class="section skills" id="skills">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>Capabilities</small>
+
+<h2>
+Skills & Expertise
+</h2>
+
+<p>
+A combination of technical knowledge, creative skills and
+digital communication experience.
+</p>
+
+</div>
+
+
+<div class="skill-grid">
+
+<div class="skill">
+<h3>Graphic Design</h3>
+<p>Photoshop, Illustrator, Canva and visual communication.</p>
+</div>
+
+<div class="skill">
+<h3>Digital Marketing</h3>
+<p>Social media, content strategy, branding and marketing.</p>
+</div>
+
+<div class="skill">
+<h3>Video Editing</h3>
+<p>Video production, editing and digital content creation.</p>
+</div>
+
+<div class="skill">
+<h3>Photography</h3>
+<p>Photography, Lightroom editing and visual storytelling.</p>
+</div>
+
+<div class="skill">
+<h3>AI & Machine Learning</h3>
+<p>Exploring artificial intelligence and machine learning.</p>
+</div>
+
+<div class="skill">
+<h3>Programming</h3>
+<p>Python and fundamental computer science concepts.</p>
+</div>
+
+<div class="skill">
+<h3>UI & UX Design</h3>
+<p>Interface design, visual hierarchy and user experience.</p>
+</div>
+
+<div class="skill">
+<h3>Leadership</h3>
+<p>Team coordination, communication and project leadership.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXPERIENCE -->
+
+<section class="section experience" id="experience">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>Professional Journey</small>
+
+<h2>
+Experience
+</h2>
+
+<p>
+Selected roles and responsibilities from my professional
+and organizational journey.
+</p>
+
+</div>
+
+
+<div class="experience-list">
+
+
+<div class="experience-item">
+
+<div class="experience-date">
+PRESENT
+</div>
+
+<div class="experience-content">
+
+<h3>
+Director of Digital Marketing
+</h3>
+
+<h4>
+Sokher Bonon
+</h4>
+
+<p>
+Working on digital marketing, branding, social media
+communication and creative content for the clothing brand.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="experience-item">
+
+<div class="experience-date">
+PRESENT
+</div>
+
+<div class="experience-content">
+
+<h3>
+Page Admin & Marketing
+</h3>
+
+<h4>
+BD Clean - Dhaka</h4>
+
+<p>
+Managing digital communication, creative content and
+marketing-related activities for a community-driven
+organization.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="experience-item">
+
+<div class="experience-date">
+PRESENT
+</div>
+
+<div class="experience-content">
+
+<h3>
+Lead Designer
+</h3>
+
+<h4>
+DIU NLP & ML Research Lab</h4>
+
+<p>
+Leading creative design activities and supporting digital
+communication, promotional materials and visual identity.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="experience-item">
+
+<div class="experience-date">
+CO-FOUNDER
+</div>
+
+<div class="experience-content">
+
+<h3>
+Co-Founder & COO
+</h3>
+
+<h4>
+Techezen</h4>
+
+<p>
+Contributing to organizational strategy, operations,
+technology and creative initiatives.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section class="section projects" id="projects">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>Selected Work</small>
+
+<h2>
+Projects
+</h2>
+
+<p>
+A selection of academic, technical and creative projects.
+</p>
+
+</div>
+
+
+<div class="project-grid">
+
+
+<div class="project">
+
+<div class="project-image">
+
+<img
+src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=90"
+alt="Online Banking Management System"
+>
+
+</div>
+
+<div class="project-content">
+
+<div class="project-tag">
+Database Project
+</div>
+
+<h3>
+Online Banking Management System
+</h3>
+
+<p>
+A database management project designed to manage online
+banking, loan and deposit operations.
+</p>
+
+<a href="#" class="project-link">
+View Project
+</a>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-image">
+
+<img
+src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=90"
+alt="Digital Marketing"
+>
+
+</div>
+
+<div class="project-content">
+
+<div class="project-tag">
+Digital Marketing
+</div>
+
+<h3>
+Digital Marketing Projects
+</h3>
+
+<p>
+Creative campaigns, social media content, branding and
+digital communication projects.
+</p>
+
+<a href="#" class="project-link">
+View Work
+</a>
+
+</div>
+
+</div>
+
+
+<div class="project">
+
+<div class="project-image">
+
+<img
+src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=90"
+alt="Technology Project"
+>
+
+</div>
+
+<div class="project-content">
+
+<div class="project-tag">
+Technology
+</div>
+
+<h3>
+Creative Technology Projects
+</h3>
+
+<p>
+Academic and personal experiments combining technology,
+design and digital media.
+</p>
+
+<a href="#" class="project-link">
+View Projects
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EDUCATION -->
+
+<section class="section education" id="education">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>Academic Background</small>
+
+<h2>
+Education
+</h2>
+
+</div>
+
+
+<div class="education-card">
+
+<h3>
+B.Sc. in Computer Science & Engineering
+</h3>
+
+<h4>
+Daffodil International University
+</h4>
+
+<p>
+Currently pursuing a Bachelor of Science in Computer
+Science & Engineering with an interest in software,
+technology, artificial intelligence and digital innovation.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ACTIVITIES -->
+
+<section class="section activities">
+
+<div class="container">
+
+<div class="section-title">
+
+<small style="color:#b9dd87;">
+Leadership & Activities
+</small>
+
+<h2>
+Beyond academics.
+</h2>
+
+<p>
+My involvement in creative, organizational and community
+initiatives.
+</p>
+
+</div>
+
+
+<div class="activity-grid">
+
+<div class="activity">
+
+<h3>
+BD Clean
+</h3>
+
+<p>
+Contributing to digital communication, creative media and
+community-focused activities.
+</p>
+
+</div>
+
+
+<div class="activity">
+
+<h3>
+DIU NLP & ML Research Lab
+</h3>
+
+<p>
+Working as a Lead Designer and supporting the lab's visual
+communication and promotional activities.
+</p>
+
+</div>
+
+
+<div class="activity">
+
+<h3>
+Creative & Digital Media
+</h3>
+
+<p>
+Creating visual content, managing digital platforms and
+developing creative communication strategies.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="section contact" id="contact">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>Get In Touch</small>
+
+<h2>
+Let's connect.
+</h2>
+
+<p>
+Have a project, collaboration or idea? Feel free to reach out.
+</p>
+
+</div>
+
+
+<div class="contact-box">
+
+<div class="contact-grid">
+
+
+<div class="contact-info">
+
+<h3>
+Contact Me
+</h3>
+
+<p>
+I am open to creative collaborations, technology projects,
+digital media work and meaningful opportunities.
+</p>
+
+
+<div class="contact-item">
+
+<small>Email</small>
+
+<a href="mailto:sarker2305101690@diu.edu.bd">
+sarker2305101690@diu.edu.bd
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+<small>University</small>
+
+<span>
+Daffodil International University
+</span>
+
+</div>
+
+
+<div class="social-links">
+
+<a href="https://github.com/mdtaslim007" target="_blank">
+GitHub
+</a>
+
+<a href="#" target="_blank">
+LinkedIn
+</a>
+
+<a href="#" target="_blank">
+Facebook
+</a>
+
+</div>
+
+</div>
+
+
+<form
+class="contact-form"
+onsubmit="sendMessage(event)"
+>
+
+<input
+type="text"
+placeholder="Your Name"
+required
+>
+
+<input
+type="email"
+placeholder="Your Email"
+required
+>
+
+<input
+type="text"
+placeholder="Subject"
+required
+>
+
+<textarea
+placeholder="Your Message"
+required
+></textarea>
+
+<button
+type="submit"
+class="btn btn-primary"
+>
+Send Message
+</button>
+
+</form>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-top">
+
+<div>
+
+<div class="footer-name">
+Md. Taslim <span>Sarker</span>
+</div>
+
+<p>
+Computer Science Student, Digital Creator, AI & ML
+Enthusiast and Creative Media Professional.
+</p>
+
+</div>
+
+
+<div class="footer-links">
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Md. Taslim Sarker. All Rights Reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu() {
+
+    const menu = document.getElementById("mobileMenu");
+
+    if(menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+
+}
+
+
+function sendMessage(event) {
+
+    event.preventDefault();
+
+    alert(
+        "Thank you for your message. " +
+        "This demo form is ready to be connected to a real email service."
+    );
+
+}
+
+</script>
+
+</body>
+</html>
